@@ -1,0 +1,11 @@
+# Offline model preparation only. Never needed by the iOS app at runtime.
+# Versions pinned to the combination validated with coremltools 9 (newer torch/numpy break the converter).
+torch==2.7.0
+torchvision==0.22.0
+numpy<2.3
+open_clip_torch>=3.0
+timm>=1.0
+coremltools>=9.0
+scikit-learn
+huggingface_hub
+pillow

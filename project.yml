@@ -1,0 +1,112 @@
+name: KeepOne
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+  groupSortPosition: top
+configFiles:
+  Debug: Config/Signing.xcconfig
+  Release: Config/Signing.xcconfig
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    DEAD_CODE_STRIPPING: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+targets:
+  KeepOne:
+    type: application
+    platform: iOS
+    sources:
+      - path: KeepOne
+        excludes:
+          - "**/*.md"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(KEEPONE_BUNDLE_ID)
+        PRODUCT_NAME: KeepOne
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        COREML_CODEGEN_LANGUAGE: None
+        ENABLE_PREVIEWS: YES
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: KeepOne/App/Info.plist
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
+    info:
+      path: KeepOne/App/Info.plist
+      properties:
+        CFBundleDisplayName: KeepOne
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSRequiresIPhoneOS: true
+        ITSAppUsesNonExemptEncryption: false
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIStatusBarStyle: UIStatusBarStyleDefault
+        NSPhotoLibraryUsageDescription: KeepOne analyzes the photos and videos you allow, entirely on this iPhone, to find duplicates, bad shots and temporary photos. Nothing is uploaded, and nothing is deleted without your final confirmation.
+        PHPhotoLibraryPreventAutomaticLimitedAccessAlert: true
+        UIBackgroundModes:
+          - processing
+        BGTaskSchedulerPermittedIdentifiers:
+          - $(PRODUCT_BUNDLE_IDENTIFIER).scan.processing
+          - $(PRODUCT_BUNDLE_IDENTIFIER).scan.continued.*
+  KeepOneTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: KeepOneTests
+    dependencies:
+      - target: KeepOne
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(KEEPONE_BUNDLE_ID).tests
+        GENERATE_INFOPLIST_FILE: YES
+  KeepOneUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: KeepOneUITests
+    dependencies:
+      - target: KeepOne
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(KEEPONE_BUNDLE_ID).uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: KeepOne
+schemes:
+  KeepOne:
+    build:
+      targets:
+        KeepOne: all
+        KeepOneTests: [test]
+        KeepOneUITests: [test]
+    run:
+      config: Release
+    test:
+      config: Debug
+      gatherCoverageData: false
+      targets:
+        - KeepOneTests
+    archive:
+      config: Release
+  KeepOneUITests:
+    build:
+      targets:
+        KeepOne: all
+        KeepOneUITests: [test]
+    test:
+      config: Debug
+      targets:
+        - KeepOneUITests

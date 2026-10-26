@@ -1,0 +1,430 @@
+{
+  "format": "float16-le row-major [conceptCount x embeddingDim]",
+  "model": "MobileCLIP2-S0",
+  "embeddingDim": 512,
+  "conceptCount": 77,
+  "logitScale": 64.32988739013672,
+  "createdAt": "2026-10-03T21:16:57+00:00",
+  "concepts": [
+    {
+      "id": "receipt",
+      "group": "receipt",
+      "promptCount": 18
+    },
+    {
+      "id": "restaurant_bill",
+      "group": "receipt",
+      "promptCount": 9
+    },
+    {
+      "id": "fuel_receipt",
+      "group": "receipt",
+      "promptCount": 6
+    },
+    {
+      "id": "card_slip",
+      "group": "receipt",
+      "promptCount": 9
+    },
+    {
+      "id": "invoice",
+      "group": "receipt",
+      "promptCount": 9
+    },
+    {
+      "id": "parking_space",
+      "group": "parking",
+      "promptCount": 12
+    },
+    {
+      "id": "parking_pillar",
+      "group": "parking",
+      "promptCount": 12
+    },
+    {
+      "id": "parking_garage",
+      "group": "parking",
+      "promptCount": 12
+    },
+    {
+      "id": "parked_car",
+      "group": "parking",
+      "promptCount": 9
+    },
+    {
+      "id": "parking_ticket",
+      "group": "parking",
+      "promptCount": 9
+    },
+    {
+      "id": "serial_label",
+      "group": "productLabel",
+      "promptCount": 12
+    },
+    {
+      "id": "router_label",
+      "group": "productLabel",
+      "promptCount": 9
+    },
+    {
+      "id": "appliance_plate",
+      "group": "productLabel",
+      "promptCount": 12
+    },
+    {
+      "id": "barcode",
+      "group": "productLabel",
+      "promptCount": 9
+    },
+    {
+      "id": "packaging",
+      "group": "productLabel",
+      "promptCount": 9
+    },
+    {
+      "id": "cable_setup",
+      "group": "productLabel",
+      "promptCount": 9
+    },
+    {
+      "id": "price_tag",
+      "group": "priceTag",
+      "promptCount": 12
+    },
+    {
+      "id": "store_shelf",
+      "group": "priceTag",
+      "promptCount": 12
+    },
+    {
+      "id": "showroom",
+      "group": "priceTag",
+      "promptCount": 6
+    },
+    {
+      "id": "clothing_tag",
+      "group": "priceTag",
+      "promptCount": 9
+    },
+    {
+      "id": "qr_code",
+      "group": "ticketQR",
+      "promptCount": 9
+    },
+    {
+      "id": "ticket",
+      "group": "ticketQR",
+      "promptCount": 15
+    },
+    {
+      "id": "boarding_pass",
+      "group": "ticketQR",
+      "promptCount": 6
+    },
+    {
+      "id": "reservation",
+      "group": "ticketQR",
+      "promptCount": 9
+    },
+    {
+      "id": "shipping_label",
+      "group": "package",
+      "promptCount": 9
+    },
+    {
+      "id": "parcel",
+      "group": "package",
+      "promptCount": 12
+    },
+    {
+      "id": "menu",
+      "group": "menuSign",
+      "promptCount": 12
+    },
+    {
+      "id": "opening_hours",
+      "group": "menuSign",
+      "promptCount": 6
+    },
+    {
+      "id": "timetable",
+      "group": "menuSign",
+      "promptCount": 9
+    },
+    {
+      "id": "info_sign",
+      "group": "menuSign",
+      "promptCount": 12
+    },
+    {
+      "id": "computer_screen",
+      "group": "screenPhoto",
+      "promptCount": 9
+    },
+    {
+      "id": "tv_screen",
+      "group": "screenPhoto",
+      "promptCount": 6
+    },
+    {
+      "id": "error_message",
+      "group": "screenPhoto",
+      "promptCount": 9
+    },
+    {
+      "id": "device_settings",
+      "group": "screenPhoto",
+      "promptCount": 9
+    },
+    {
+      "id": "document",
+      "group": "document",
+      "promptCount": 12
+    },
+    {
+      "id": "form",
+      "group": "document",
+      "promptCount": 9
+    },
+    {
+      "id": "handwritten_note",
+      "group": "document",
+      "promptCount": 9
+    },
+    {
+      "id": "whiteboard",
+      "group": "document",
+      "promptCount": 9
+    },
+    {
+      "id": "manual",
+      "group": "document",
+      "promptCount": 9
+    },
+    {
+      "id": "slide",
+      "group": "document",
+      "promptCount": 6
+    },
+    {
+      "id": "passport",
+      "group": "sensitiveDocument",
+      "promptCount": 9
+    },
+    {
+      "id": "id_card",
+      "group": "sensitiveDocument",
+      "promptCount": 12
+    },
+    {
+      "id": "driver_license",
+      "group": "sensitiveDocument",
+      "promptCount": 6
+    },
+    {
+      "id": "bank_card",
+      "group": "sensitiveDocument",
+      "promptCount": 9
+    },
+    {
+      "id": "financial_statement",
+      "group": "sensitiveDocument",
+      "promptCount": 9
+    },
+    {
+      "id": "medical_document",
+      "group": "sensitiveDocument",
+      "promptCount": 12
+    },
+    {
+      "id": "contract",
+      "group": "sensitiveDocument",
+      "promptCount": 12
+    },
+    {
+      "id": "certificate",
+      "group": "sensitiveDocument",
+      "promptCount": 9
+    },
+    {
+      "id": "car_damage",
+      "group": "evidence",
+      "promptCount": 15
+    },
+    {
+      "id": "property_damage",
+      "group": "evidence",
+      "promptCount": 12
+    },
+    {
+      "id": "injury",
+      "group": "evidence",
+      "promptCount": 9
+    },
+    {
+      "id": "broken_item",
+      "group": "evidence",
+      "promptCount": 9
+    },
+    {
+      "id": "app_screenshot",
+      "group": "screenshotLike",
+      "promptCount": 12
+    },
+    {
+      "id": "map_screenshot",
+      "group": "screenshotLike",
+      "promptCount": 6
+    },
+    {
+      "id": "meme",
+      "group": "meme",
+      "promptCount": 12
+    },
+    {
+      "id": "cartoon",
+      "group": "meme",
+      "promptCount": 9
+    },
+    {
+      "id": "quote_image",
+      "group": "meme",
+      "promptCount": 6
+    },
+    {
+      "id": "floor",
+      "group": "accidental",
+      "promptCount": 12
+    },
+    {
+      "id": "ceiling",
+      "group": "accidental",
+      "promptCount": 9
+    },
+    {
+      "id": "pocket",
+      "group": "accidental",
+      "promptCount": 12
+    },
+    {
+      "id": "blurry",
+      "group": "accidental",
+      "promptCount": 9
+    },
+    {
+      "id": "family",
+      "group": "memory",
+      "promptCount": 9
+    },
+    {
+      "id": "child",
+      "group": "memory",
+      "promptCount": 12
+    },
+    {
+      "id": "portrait",
+      "group": "memory",
+      "promptCount": 12
+    },
+    {
+      "id": "group_photo",
+      "group": "memory",
+      "promptCount": 6
+    },
+    {
+      "id": "vacation",
+      "group": "memory",
+      "promptCount": 9
+    },
+    {
+      "id": "landscape",
+      "group": "memory",
+      "promptCount": 12
+    },
+    {
+      "id": "pet",
+      "group": "memory",
+      "promptCount": 9
+    },
+    {
+      "id": "celebration",
+      "group": "memory",
+      "promptCount": 12
+    },
+    {
+      "id": "event",
+      "group": "memory",
+      "promptCount": 9
+    },
+    {
+      "id": "city",
+      "group": "memory",
+      "promptCount": 9
+    },
+    {
+      "id": "food",
+      "group": "food",
+      "promptCount": 15
+    },
+    {
+      "id": "car",
+      "group": "neutral",
+      "promptCount": 6
+    },
+    {
+      "id": "interior",
+      "group": "neutral",
+      "promptCount": 9
+    },
+    {
+      "id": "plant",
+      "group": "neutral",
+      "promptCount": 9
+    },
+    {
+      "id": "object",
+      "group": "neutral",
+      "promptCount": 9
+    },
+    {
+      "id": "artwork",
+      "group": "neutral",
+      "promptCount": 9
+    }
+  ],
+  "imageModel": {
+    "file": "SemanticImageModel.mlpackage",
+    "inputSize": 256,
+    "weights": "float16",
+    "sizeMB": 22.89,
+    "validation": {
+      "cpu": {
+        "mean_cosine": 0.99987,
+        "min_cosine": 0.99971,
+        "group_top1_agreement": 1.0
+      },
+      "neuralEngine": {
+        "mean_cosine": 0.98994,
+        "min_cosine": 0.98412,
+        "group_top1_agreement": 0.857
+      },
+      "macLatencyMs": 0.896,
+      "sizeMB": 22.89
+    },
+    "fp16Validation": {
+      "cpu": {
+        "mean_cosine": 0.99987,
+        "min_cosine": 0.99971,
+        "group_top1_agreement": 1.0
+      },
+      "neuralEngine": {
+        "mean_cosine": 0.98994,
+        "min_cosine": 0.98412,
+        "group_top1_agreement": 0.857
+      },
+      "macLatencyMs": 0.896,
+      "sizeMB": 22.89
+    },
+    "checkpoint": "https://huggingface.co/apple/MobileCLIP2-S0"
+  }
+}

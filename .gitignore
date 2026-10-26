@@ -1,0 +1,20 @@
+# Build output
+build/
+DerivedData/
+*.xcresult
+*.ipa
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+
+# Personal signing settings
+Config/Signing.local.xcconfig
+
+# Model preparation environment (never commit Python envs)
+scripts/.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

@@ -1,0 +1,99 @@
+{
+  "_comment": "Source of truth for KeepOne's zero-shot semantic concepts. Each concept averages several prompt variants (prompt ensembling). 'group' must match SemanticGroup raw values in KeepOne/Analysis/Semantic/SemanticGroup.swift. Regenerate embeddings with scripts/prepare_models.py after editing.",
+  "templates": ["{}", "a photo of {}", "a phone camera photo of {}"],
+  "concepts": [
+    {"id": "receipt", "group": "receipt", "prompts": ["a receipt", "a printed store receipt", "a cash register receipt", "a shopping receipt", "a paper receipt with a list of prices", "a long thermal paper receipt"]},
+    {"id": "restaurant_bill", "group": "receipt", "prompts": ["a restaurant bill", "a restaurant receipt on a table", "a cafe bill"]},
+    {"id": "fuel_receipt", "group": "receipt", "prompts": ["a fuel station receipt", "a gas station receipt"]},
+    {"id": "card_slip", "group": "receipt", "prompts": ["a card payment slip", "a POS terminal printout", "a credit card payment receipt"]},
+    {"id": "invoice", "group": "receipt", "prompts": ["an invoice", "a printed invoice with a total amount", "a bill with VAT"]},
+
+    {"id": "parking_space", "group": "parking", "prompts": ["a parking space number painted on the ground", "a numbered parking spot", "a parking bay marking", "a parking space"]},
+    {"id": "parking_pillar", "group": "parking", "prompts": ["a pillar in a parking garage with a level number", "a concrete column with a parking sector letter", "a parking level sign in a garage", "a sign showing parking level P2"]},
+    {"id": "parking_garage", "group": "parking", "prompts": ["an underground parking garage", "a multi-storey car park", "the inside of a parking garage", "an empty car park"]},
+    {"id": "parked_car", "group": "parking", "prompts": ["a parked car in a parking lot", "a car parked in an underground garage", "a photo taken to remember where the car is parked"]},
+    {"id": "parking_ticket", "group": "parking", "prompts": ["a parking ticket", "a car park ticket", "a parking meter receipt"]},
+
+    {"id": "serial_label", "group": "productLabel", "prompts": ["a serial number label", "a sticker with a serial number and a barcode", "a device information sticker", "a product label with a model number"]},
+    {"id": "router_label", "group": "productLabel", "prompts": ["a router label with a wifi password", "the label on the bottom of a wifi router", "an electronics label with MAC address"]},
+    {"id": "appliance_plate", "group": "productLabel", "prompts": ["an appliance rating plate", "a model plate on a washing machine", "a technical data plate on a machine", "a label on the back of a TV"]},
+    {"id": "barcode", "group": "productLabel", "prompts": ["a barcode", "a close-up of a product barcode", "a barcode sticker"]},
+    {"id": "packaging", "group": "productLabel", "prompts": ["product packaging", "the back of a product package with small print", "a product box with specifications"]},
+    {"id": "cable_setup", "group": "productLabel", "prompts": ["cables plugged into the back of a device", "a cable connection photographed for reference", "the ports on the back of a computer"]},
+
+    {"id": "price_tag", "group": "priceTag", "prompts": ["a price tag", "a supermarket price label", "a shelf price label in a store", "a sale price sign"]},
+    {"id": "store_shelf", "group": "priceTag", "prompts": ["a product on a store shelf", "products on supermarket shelves", "a product photographed in a shop", "an item in an electronics store"]},
+    {"id": "showroom", "group": "priceTag", "prompts": ["furniture in a store showroom with a price tag", "a sofa in a furniture store"]},
+    {"id": "clothing_tag", "group": "priceTag", "prompts": ["a clothing label", "a clothing tag with size and price", "a garment care label"]},
+
+    {"id": "qr_code", "group": "ticketQR", "prompts": ["a QR code", "a printed QR code", "a QR code on a poster"]},
+    {"id": "ticket", "group": "ticketQR", "prompts": ["a ticket", "an event ticket", "a train ticket", "a cinema ticket", "a concert ticket"]},
+    {"id": "boarding_pass", "group": "ticketQR", "prompts": ["a boarding pass", "a flight boarding pass with a barcode"]},
+    {"id": "reservation", "group": "ticketQR", "prompts": ["a reservation confirmation", "a booking confirmation", "an appointment confirmation"]},
+
+    {"id": "shipping_label", "group": "package", "prompts": ["a shipping label", "a parcel label with a tracking number", "a courier label on a box"]},
+    {"id": "parcel", "group": "package", "prompts": ["a cardboard package", "a delivery parcel", "a package box at the door", "a parcel locker"]},
+
+    {"id": "menu", "group": "menuSign", "prompts": ["a restaurant menu", "a menu", "a cafe menu board", "a drinks menu"]},
+    {"id": "opening_hours", "group": "menuSign", "prompts": ["an opening hours sign", "store opening hours on a door"]},
+    {"id": "timetable", "group": "menuSign", "prompts": ["a bus timetable", "a train departure board", "a printed schedule"]},
+    {"id": "info_sign", "group": "menuSign", "prompts": ["an information sign", "a museum information plaque", "a notice on a wall", "a poster with information"]},
+
+    {"id": "computer_screen", "group": "screenPhoto", "prompts": ["a photo of a computer screen", "a photo of a laptop screen", "a photo of a monitor displaying text"]},
+    {"id": "tv_screen", "group": "screenPhoto", "prompts": ["a photo of a television screen", "a photo of a TV showing a menu"]},
+    {"id": "error_message", "group": "screenPhoto", "prompts": ["an error message on a screen", "a dialog box with an error", "a device display showing an error code"]},
+    {"id": "device_settings", "group": "screenPhoto", "prompts": ["a device configuration screen", "a settings page on a display", "a car dashboard display"]},
+
+    {"id": "document", "group": "document", "prompts": ["a document", "a printed page of text", "a sheet of paper with text", "a letter"]},
+    {"id": "form", "group": "document", "prompts": ["a paper form", "a filled form", "an application form"]},
+    {"id": "handwritten_note", "group": "document", "prompts": ["a handwritten note", "handwriting on paper", "a notebook page"]},
+    {"id": "whiteboard", "group": "document", "prompts": ["a whiteboard", "a whiteboard with writing", "a chalkboard with notes"]},
+    {"id": "manual", "group": "document", "prompts": ["an instruction manual", "appliance instructions", "assembly instructions"]},
+    {"id": "slide", "group": "document", "prompts": ["a presentation slide", "a photo of a projected slide"]},
+
+    {"id": "passport", "group": "sensitiveDocument", "prompts": ["a passport", "a passport photo page", "an open passport"]},
+    {"id": "id_card", "group": "sensitiveDocument", "prompts": ["a national identity card", "an ID card", "a residence permit card", "an identity document"]},
+    {"id": "driver_license", "group": "sensitiveDocument", "prompts": ["a driver's license", "a driving licence card"]},
+    {"id": "bank_card", "group": "sensitiveDocument", "prompts": ["a credit card", "a bank card", "a debit card"]},
+    {"id": "financial_statement", "group": "sensitiveDocument", "prompts": ["a bank statement", "a financial statement", "a tax document"]},
+    {"id": "medical_document", "group": "sensitiveDocument", "prompts": ["a medical document", "a prescription", "a medical test result", "a doctor's note"]},
+    {"id": "contract", "group": "sensitiveDocument", "prompts": ["a signed contract", "a legal document", "a signed agreement", "a document with a signature"]},
+    {"id": "certificate", "group": "sensitiveDocument", "prompts": ["a certificate", "a diploma", "an official certificate with a stamp"]},
+
+    {"id": "car_damage", "group": "evidence", "prompts": ["a damaged car", "a dented car door", "a car accident", "a scratch on a car", "a broken car bumper"]},
+    {"id": "property_damage", "group": "evidence", "prompts": ["water damage on a ceiling", "a broken window", "property damage", "a crack in a wall"]},
+    {"id": "injury", "group": "evidence", "prompts": ["an injury", "a bruise on skin", "a wound"]},
+    {"id": "broken_item", "group": "evidence", "prompts": ["a broken product", "a damaged package with broken contents", "a cracked phone screen"]},
+
+    {"id": "app_screenshot", "group": "screenshotLike", "prompts": ["a screenshot of a phone", "a screenshot of an app", "a screenshot of a chat conversation", "a screenshot of a website"]},
+    {"id": "map_screenshot", "group": "screenshotLike", "prompts": ["a screenshot of a map", "a map with directions"]},
+
+    {"id": "meme", "group": "meme", "prompts": ["a meme", "an internet meme with text", "a funny image with a caption", "a social media post"]},
+    {"id": "cartoon", "group": "meme", "prompts": ["a cartoon", "a comic strip", "a sticker illustration"]},
+    {"id": "quote_image", "group": "meme", "prompts": ["a motivational quote image", "text on a colorful background"]},
+
+    {"id": "floor", "group": "accidental", "prompts": ["an accidental photo of the floor", "a blurry photo of the ground", "a photo of carpet by accident", "a photo of feet and floor"]},
+    {"id": "ceiling", "group": "accidental", "prompts": ["an accidental photo of the ceiling", "a photo of a ceiling light", "a blurry photo of a ceiling"]},
+    {"id": "pocket", "group": "accidental", "prompts": ["a photo taken inside a pocket", "an almost completely black photo", "a finger covering the camera lens", "a dark accidental photo"]},
+    {"id": "blurry", "group": "accidental", "prompts": ["a very blurry photo", "a motion blurred photo", "an out of focus photo"]},
+
+    {"id": "family", "group": "memory", "prompts": ["a family photo", "a family gathering", "parents with their children"]},
+    {"id": "child", "group": "memory", "prompts": ["a child playing", "a baby", "a toddler", "kids having fun"]},
+    {"id": "portrait", "group": "memory", "prompts": ["a portrait of a person", "a close-up portrait", "a selfie", "a smiling person"]},
+    {"id": "group_photo", "group": "memory", "prompts": ["a group photo of friends", "a group of people smiling at the camera"]},
+    {"id": "vacation", "group": "memory", "prompts": ["a vacation photo", "a travel photo of a famous landmark", "a beach holiday"]},
+    {"id": "landscape", "group": "memory", "prompts": ["a landscape", "a beautiful view of mountains", "a sunset over the sea", "a scenic nature view"]},
+    {"id": "pet", "group": "memory", "prompts": ["a dog", "a cat", "a pet at home"]},
+    {"id": "celebration", "group": "memory", "prompts": ["a birthday party", "a wedding", "a celebration with friends", "a christmas celebration"]},
+    {"id": "event", "group": "memory", "prompts": ["a concert", "a sports event", "a festival"]},
+    {"id": "city", "group": "memory", "prompts": ["a city street", "beautiful architecture", "a city skyline"]},
+
+    {"id": "food", "group": "food", "prompts": ["a plate of food", "a meal at a restaurant", "a dish of food", "a dessert", "a cup of coffee"]},
+
+    {"id": "car", "group": "neutral", "prompts": ["a car", "a car on the street"]},
+    {"id": "interior", "group": "neutral", "prompts": ["a room interior", "a living room", "a kitchen"]},
+    {"id": "plant", "group": "neutral", "prompts": ["a flower", "a plant", "a tree"]},
+    {"id": "object", "group": "neutral", "prompts": ["an object on a table", "a product photo", "a household item"]},
+    {"id": "artwork", "group": "neutral", "prompts": ["a painting", "an artwork in a museum", "a drawing"]}
+  ]
+}

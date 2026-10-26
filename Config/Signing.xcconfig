@@ -1,0 +1,5 @@
+// Shared defaults. Personal signing settings belong in the ignored local file.
+KEEPONE_BUNDLE_ID = com.example.KeepOne
+CODE_SIGN_STYLE = Automatic
+
+#include? "Signing.local.xcconfig"
